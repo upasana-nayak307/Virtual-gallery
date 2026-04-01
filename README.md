@@ -63,6 +63,7 @@ Web Audio API<br>
 ---
 
 ### 📁 Project Structure
+```
 Virtual-Art-Gallery/
 │
 ├── index.html      # Main HTML structure
@@ -72,6 +73,7 @@ Virtual-Art-Gallery/
 ├── image-2.png
 ├── image-3.png 
 └── README.md       # Project documentation
+```
 
 ---
 
