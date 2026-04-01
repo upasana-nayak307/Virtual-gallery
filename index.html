@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" style="height:100%">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Art Gallery</title>
+  <link href="./style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+ </head>
+ <body style="height:100%">
+  <!-- Loading -->
+  <div class="loader-screen" id="loader">
+   <div class="loader-ring"></div>
+  </div>
+  
+  <!-- Ambient orbs -->
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+  <div class="ambient-orb orb-3"></div>
+  
+  <!-- ========== LANDING ========== -->
+  <section class="landing" id="landing">
+   <div class="landing-badge">
+    <i data-lucide="sparkles" style="width:14px;height:14px"></i> Digital Museum
+   </div>
+   <h1 id="mainTitle">Virtual Art Gallery</h1>
+   <p class="subtitle" id="mainSubtitle">A curated journey through timeless masterpieces and contemporary visions, brought to life in an immersive digital space.</p><button class="enter-btn" id="enterBtn">Enter Gallery</button>
+  </section>
+  
+  <!-- ========== GALLERY ========== -->
+  <section class="gallery-section" id="gallery">
+   <div class="gallery-top">
+    <h2 id="galleryHeading">The Collection</h2>
+    <div class="top-controls">
+      <button class="icon-btn" id="slideshowBtn" title="Slideshow">
+        <i data-lucide="play" style="width:18px;height:18px"></i>
+      </button> 
+      <button class="icon-btn" id="musicBtn" title="Toggle Music">
+        <div class="music-bars paused">
+        <span></span><span></span><span></span><span></span>
+        </div>
+      </button>
+    </div>
+   </div>
+   <div class="filter-bar" id="filterBar"></div>
+   <div class="art-grid" id="artGrid"></div>
+  </section>
+  
+  <!-- Slideshow indicator -->
+  <div class="slideshow-indicator" id="slideshowIndicator">
+    <i data-lucide="play-circle" style="width:16px;height:16px"></i> 
+    <span>Slideshow playing</span>
+  </div>
+
+  <!-- ========== MODAL ========== -->
+  <div class="modal-overlay" id="modal">
+    <button class="modal-close" id="modalClose">
+      <i data-lucide="x" style="width:18px;height:18px"></i>
+    </button>
+   <div class="modal-content">
+    <div class="modal-img-side" id="modalImg"></div>
+    <div class="modal-info-side"><span class="category-tag" id="modalCat"></span>
+     <h2 id="modalTitle"></h2>
+     <p class="artist" id="modalArtist"></p>
+     <p class="desc" id="modalDesc"></p>
+     <div class="modal-nav"><button id="prevBtn"><i data-lucide="chevron-left" style="width:16px;height:16px"></i> Previous</button> <button id="nextBtn">Next <i data-lucide="chevron-right" style="width:16px;height:16px"></i></button> <button id="fullscreenBtn"><i data-lucide="maximize" style="width:16px;height:16px"></i></button>
+     </div>
+    </div>
+   </div>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
